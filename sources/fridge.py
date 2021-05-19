@@ -19,8 +19,10 @@ class NotEnoughException(Exception):
     pass
 
 
-class NotEnoughSauceException(NotEnoughException):
-    pass
+class Fridge:
+    def __init__(self, default: int = 0):
+        self._ingredients: Dict[str, int] = dict.fromkeys(ALL_INGREDIENTS, default)
+        self._count: Dict[str, int] = dict.fromkeys(ALL_INGREDIENTS, 0)
 
 
 class NotEnoughIngredientException(NotEnoughException):
