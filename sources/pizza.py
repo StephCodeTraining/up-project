@@ -25,7 +25,6 @@ RECIPES = {
     'my pizza': {
         'ingredients': {'mozzarella': 3, 'garlic' : 5},
         'price': 10,
-    }
     },
     'margherita': {
         'ingredients': {'mozzarella': 2, 'oregano': 4},

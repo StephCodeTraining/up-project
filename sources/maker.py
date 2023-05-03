@@ -32,8 +32,7 @@ class PizzaMaker:
             self._fridge.refill_sauce()
             self.__apply_sauce(pizza)
             return 'Sorry for the wait, I had to refill the sauce jar.'
-        return
-
+            
     def take_an_order(self, name: str) -> Tuple[bool, Optional[str]]:
         if name not in RECIPES:
             return False, 'I don\'t know this pizza'
