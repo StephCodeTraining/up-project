@@ -2,8 +2,8 @@
 from typing import Tuple, Dict, Optional
 
 from .fridge import Fridge, NotEnoughIngredientException, NotEnoughSauceException
-from .pizza import RECIPES
 
+from .pizza import RECIPES
 
 class PizzaMaker:
     def __init__(self, fridge: Fridge):
@@ -32,7 +32,7 @@ class PizzaMaker:
             self._fridge.refill_sauce()
             self.__apply_sauce(pizza)
             return 'Sorry for the wait, I had to refill the sauce jar.'
-            
+
     def take_an_order(self, name: str) -> Tuple[bool, Optional[str]]:
         if name not in RECIPES:
             return False, 'I don\'t know this pizza'
